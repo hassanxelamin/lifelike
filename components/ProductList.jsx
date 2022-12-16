@@ -6,14 +6,12 @@ import uuid from 'react-uuid';
 
 const ProductList = ({ products }) => {
 
-  // const { handle, title } = products[0].node;
-
-  // const { altText, url } = products[0].node.images.edges[0].node
-  
-  // const price = products[0].node.priceRange.minVariantPrice.amount
-
   return (
-    <div className='flex items-center h-screen w-screen gap-[50px] justify-center flex-wrap mt-[400px] mb-[100px] md:mt-[500px] lg:mt-0 lg:mb-0'>
+    <div className='
+      flex items-center h-screen w-screen gap-[50px] justify-center flex-wrap 
+      mt-[500px] mb-[200px] 
+      md:mt-[600px] md:mb-[300px] 
+      lg:mt-0 lg:mb-0'>
     {
       products.map((product) => {
 
