@@ -1,8 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 import { Canvas } from '@react-three/fiber'
+import dynamic from 'next/dynamic'
 
-import Logo from '../components/Logo'
+const Logo = dynamic(() => import('../components/Logo'))
 
 export default function Landing() {
 

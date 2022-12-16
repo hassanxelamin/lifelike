@@ -1,9 +1,11 @@
 import React, { useState, useContext, useEffect } from 'react'
 import { formatter } from '../utils/helpers'
-import ProductOptions from './ProductOptions'
 import { CartContext } from "../context/shopContext"
 import useSWR from 'swr';
 import axios from 'axios';
+import dynamic from 'next/dynamic'
+
+const ProductOptions = dynamic(() => import('./ProductOptions'))
 
 const fetcher = (url, id) => (
   axios.get(url, {

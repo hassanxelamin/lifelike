@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import axios from "axios";
-import ThankYouMarquee from "./ThankYou"
 import { emailValidator } from '../utils/validator';
+import dynamic from 'next/dynamic'
+
+const ThankYouMarquee = dynamic(() => import('./ThankYou'))
 
 export default function FooterForm({ setClicked }) {
   const [email, setEmail] = useState("");

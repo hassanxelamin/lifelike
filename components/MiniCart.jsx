@@ -1,6 +1,5 @@
 import { Fragment, useContext, useRef } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
-import { XMarkIcon } from '@heroicons/react/24/outline'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CartContext } from '../context/shopContext'

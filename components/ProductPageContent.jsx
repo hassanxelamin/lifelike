@@ -1,9 +1,11 @@
 import React from 'react'
 import Image from 'next/image';
-import ProductDetails from './ProductDetails' 
-import Layout from './Layout'
+import dynamic from 'next/dynamic'
 
-export const ProductPageContent = ({ product }) => {
+const ProductDetails = dynamic(() => import('./ProductDetails'))
+const Layout = dynamic(() => import('./Layout'))
+
+const ProductPageContent = ({ product }) => {
   const imageNode = product.images.edges[0].node
   const url = imageNode.url;
   const alt = product.altText;
@@ -23,3 +25,5 @@ export const ProductPageContent = ({ product }) => {
     </Layout>
   )
 }
+
+export default ProductPageContent

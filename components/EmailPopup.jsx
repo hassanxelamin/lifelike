@@ -1,8 +1,8 @@
 import React, { useState, useContext } from 'react'
 import axios from "axios";
+import { motion } from "framer-motion"
 import EmailContext from '../context/EmailContext'
 import { emailValidator } from '../utils/validator';
-import { motion } from "framer-motion"
 
 const EmailPopup = ({ open, setOpen }) => {
 

@@ -1,9 +1,11 @@
 import Link from 'next/link'
 import React, { useContext } from 'react'
 import { CartContext } from '../context/shopContext'
-import MiniCart from './MiniCart'
-import Logo from './Logo'
 import { Canvas } from '@react-three/fiber'
+import dynamic from 'next/dynamic'
+
+const MiniCart = dynamic(() => import('./MiniCart'))
+const Logo = dynamic(() => import('./Logo'))
 
 const cameraSettings = {
   fov: 45,

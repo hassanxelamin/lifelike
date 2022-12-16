@@ -1,9 +1,11 @@
 import '../styles/globals.css'
+
 import React, {StrictMode} from 'react'
-import { EmailProvider } from '../context/EmailContext'
-import ShopProvider from '../context/shopContext'
 import { useRouter } from 'next/router'
 import Script from 'next/script'
+
+import { EmailProvider } from '../context/EmailContext'
+import ShopProvider from '../context/shopContext'
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()

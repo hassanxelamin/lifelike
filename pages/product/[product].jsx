@@ -1,6 +1,8 @@
 import React from 'react'
-import { ProductPageContent } from '../../components/ProductPageContent.jsx'
 import { getAllProducts, getProduct } from "../../libs/shopify"
+import dynamic from 'next/dynamic'
+
+const ProductPageContent = dynamic(() => import('../../components/ProductPageContent'))
 
 export default function ProductPage({ product }) {
 

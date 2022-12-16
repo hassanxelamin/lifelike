@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { motion } from 'framer-motion'
-import Nav from './Nav'
-import Footer from './Footer'
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
+
+const Nav = dynamic(() => import('./Nav'))
+const Footer = dynamic(() => import('./Footer'))
 
 const Layout = (props) => {
 

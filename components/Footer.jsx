@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Marquee from './Marquee'
-import FooterForm from './FooterForm'
+import dynamic from 'next/dynamic'
+
+const FooterForm = dynamic(() => import('./FooterForm'))
 
 export default function Footer({ setOpen }) {
   const [clicked, setClicked] = useState(false);
