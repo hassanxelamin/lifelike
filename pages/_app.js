@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
     <ShopProvider>
       <EmailProvider>    
         <Component {...pageProps} key={router.asPath} />
-        {/* <Script 
+        <Script 
           strategy="afterInteractive" 
           src="https://www.googletagmanager.com/gtag/js?id=G-C4KWESBCPP" 
         />
@@ -21,7 +21,7 @@ function MyApp({ Component, pageProps }) {
             gtag('js', new Date());
             gtag('config', 'G-C4KWESBCPP')
           `}
-        </Script> */}
+        </Script>
       </EmailProvider>
     </ShopProvider>
   )
