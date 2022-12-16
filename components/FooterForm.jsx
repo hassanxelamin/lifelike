@@ -31,12 +31,12 @@ export default function FooterForm({ setClicked }) {
     <>
       {state === "IDLE" && (
       <>
-        <div className="w-full h-full flex items-center justify-center">
+        <div className="w-screen flex items-center justify-center">
           <form onSubmit={subscribe}>
-            <input className="text-white text-center w-[400px] h-[30px] bg-transparent border-b-[1px]" onKeyPress={keyDownHandler} type="text" placeholder="Enter Email..." value={email} onChange={(e) => setEmail(e.target.value)}/>
+            <input className="text-white text-center w-[300px] h-[30px] bg-transparent border-b-[1px]" onKeyPress={keyDownHandler} type="text" placeholder="Enter Email..." value={email} onChange={(e) => setEmail(e.target.value)}/>
           </form>
         </div> 
-        <div onClick={() => {setClicked(false)}} className="cursor-pointer text-[24px] mr-8">[<i>×</i>]</div>
+        <div onClick={() => {setClicked(false)}} className="cursor-pointer text-[24px] pr-3">[<i>×</i>]</div>
       </>
       )} 
       {state === "ERROR" && (

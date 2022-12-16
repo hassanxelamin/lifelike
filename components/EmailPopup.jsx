@@ -33,7 +33,7 @@ const EmailPopup = ({ open, setOpen }) => {
             },
           }}
         >
-          <div className='w-[400px] sm:w-[566px] h-[135px] bg-[#000] rounded-3xl relative z-50'>
+          <div className='w-[330px] sm:w-[566px] h-[135px] bg-[#000] rounded-3xl relative z-50'>
           { state === "IDLE"
             ? 
             <>
@@ -41,7 +41,7 @@ const EmailPopup = ({ open, setOpen }) => {
                 <h1 className='absolute w-[300px] sm:w-[480px] h-[24px] text-white text-[12px] md:text-[14px] top-[13px] left-[13px]'>Sign up to the LifeLike newsletter to recieve updates on announcements, releases, and exclusive content </h1>
                 <div className="absolute top-[13px] right-[0px] cursor-pointer text-[18px] mr-8 color-white" onClick={() => {setOpen(false)}}>[<i>×</i>]</div>
               </div>
-              <form onSubmit={subscribe} className="absolute top-[70px] left-[13px] text-white text-center w-[504px] flex">
+              <form onSubmit={subscribe} className="absolute top-[70px] left-[13px] text-white text-center w-[300px] flex">
                 <input className="text-white text-[16px] w-[265px] md:w-[400px] h-[30px] bg-transparent border-b-[1px] mr-5" onKeyPress={keyDownHandler} type="text" placeholder="Enter Email..." value={email} onChange={(e) => setEmail(e.target.value)}/>
                 <button className="bg-white w-[90px] h-[30px] text-black border-[2px] font-bold rounded" type="submit" disabled={state === "LOADING"}>{state === "LOADING" ? 'Loading...' : 'Submit'}</button>
               </form>

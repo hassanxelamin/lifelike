@@ -102,8 +102,8 @@ const ProductDetails = ({ product }) => {
   return (
     <div className='h-[465px] overflow-hidden sm:ml-7'>
       <h1 className='sm:w-[421px] text-[30px] md:text-[38px]'>{title}</h1>
-      <h1 className='sm:w-[421px] text-[30px] md:text-[38px] mt-5'>{formatter.format(price)} USD</h1>
-      <div className='flex mt-8'>
+      <h1 className='sm:w-[421px] text-[25px] md:text-[35px] mt-5'>{formatter.format(price)} USD</h1>
+      <div className='flex gap-[25px] mt-8'>
       {
         product.options.map(({ name, values }) => (
           <ProductOptions 
@@ -131,7 +131,7 @@ const ProductDetails = ({ product }) => {
                 onClick={() => {
                   addToCart(selectedVariant)
                 }}
-                className="text-[16px] w-[108px] h-[24px]"
+                className="text-[16px] w-[108px] h-[24px] border-[1px] border-black rounded-[3px] border-solid"
               >
                 Add To Cart 
               </button>

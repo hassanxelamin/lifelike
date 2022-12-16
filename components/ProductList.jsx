@@ -13,7 +13,7 @@ const ProductList = ({ products }) => {
   // const price = products[0].node.priceRange.minVariantPrice.amount
 
   return (
-    <div className='flex items-center gap-[50px] justify-center flex-wrap mt-[450px] mb-[100px] md:mt-[500px] lg:mt-0 lg:mb-0'>
+    <div className='flex items-center h-screen w-screen gap-[50px] justify-center flex-wrap mt-[400px] mb-[100px] md:mt-[500px] lg:mt-0 lg:mb-0'>
     {
       products.map((product) => {
 

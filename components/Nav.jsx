@@ -34,7 +34,7 @@ export default function Nav({ open, setOpen }) {
         {/* <div onClick={() => {setOpen()}} className='cursor-pointer'>Brand</div> */}
         {open 
           ? <div onClick={() => {setOpen(), setCartOpen(!cartOpen)}} className="ml-[23px] cursor-pointer">Cart ({cartQuantity})</div>
-          : <div onClick={() => {setCartOpen(!cartOpen)}} className="ml-[23px] cursor-pointer">Cart ({cartQuantity})</div>
+          : <div onClick={() => {setCartOpen(!cartOpen)}} className="ml-[20px] sm:ml-[23px] cursor-pointer">Cart ({cartQuantity})</div>
         }
         <MiniCart cartQuanity={cartQuantity} />
       </div>

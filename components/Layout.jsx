@@ -20,7 +20,7 @@ const Layout = (props) => {
         <Nav open={props.open} setOpen={setOpenFalse} />
       </div>
 
-      <div className='flex justify-center items-center h-screen'>{props.children}</div>
+      <div className='flex justify-center items-center items-center h-screen'>{props.children}</div>
 
       <div className='overflow-hidden fixed left-0 bottom-0 w-full'>
         <Footer setOpen={setOpenFalse} />
