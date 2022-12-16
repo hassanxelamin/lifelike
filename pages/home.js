@@ -40,7 +40,7 @@ export default function Home({ products }) {
 }
 
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const products = await getProductsInCollection()
 
   return {
