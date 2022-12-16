@@ -73,7 +73,7 @@ export async function getProductsInCollection() {
 */
 export async function getAllProducts() {
   const query =  `{
-    products(first: 25) {
+    products(first: 2) {
       edges {
         node {
           handle 
@@ -100,7 +100,7 @@ export async function getProduct(handle) {
       title
       handle
       description
-      images(first: 5) {
+      images(first: 2) {
         edges {
           node {
             url
@@ -113,7 +113,7 @@ export async function getProduct(handle) {
         values
         id
       }
-      variants(first: 25) {
+      variants(first: 5) {
         edges {
           node {
             selectedOptions {
