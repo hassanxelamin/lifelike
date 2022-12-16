@@ -1,5 +1,3 @@
-import axios from "axios";
-
 export default async function inventory(req, res) {
   const { query: { id } } = req
 
@@ -24,7 +22,7 @@ export default async function inventory(req, res) {
     }
 
     try {
-      const data = await axios(URL, options).then(response => {
+      const data = await fetch(URL, options).then(response => {
         return response.json()
       })
       return data
