@@ -36,7 +36,7 @@ export async function getProductsInCollection() {
   const query =  `{
     collection(handle: "frontpage") {
       title
-      products(first: 25) {
+      products(first: 2) {
         edges {
           node {
             id
@@ -47,7 +47,7 @@ export async function getProductsInCollection() {
 	              amount
 	            }
 	          }
-            images(first: 5) {
+            images(first: 1) {
               edges {
                 node {
                   url

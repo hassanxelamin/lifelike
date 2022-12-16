@@ -31,19 +31,19 @@ export default function Home({ products }) {
 
   return (
     <Layout open={open} setOpen={setOpenState}>
-      {/* <EmailPopup open={open} setOpen={setOpenState}/>
+      <EmailPopup open={open} setOpen={setOpenState}/>
       <div onClick={() => {setOpen(false)}}>
         <ProductList products={products} /> 
-      </div> */}
+      </div>
     </Layout>
   )
 }
 
 
-// export async function getServerSideProps() {
-//   const products = await getProductsInCollection()
+export async function getServerSideProps() {
+  const products = await getProductsInCollection()
 
-//   return {
-//     props: { products },
-//   }
-// }
+  return {
+    props: { products },
+  }
+}
