@@ -51,7 +51,7 @@ const EmailPopup = ({ open, setOpen }) => {
               { errorMessage === "INVALID" ? 
                 <>
                   <div> Email Invalid</div>
-                  <h1 className='absolute w-[480px] h-[24px] text-white text-[25px] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>Thank you for signing up! </h1>
+                  <h1 className='absolute w-[480px] h-[24px] text-white text-[12px] sm:text-[25px] top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]'>Thank you for signing up! </h1>
                   <div className="absolute top-[13px] right-[0px] cursor-pointer text-[18px] mr-8 color-white" onClick={() => {setOpen(false), setStateIdle()}}>[<i>×</i>]</div>
                 </>
                 :
