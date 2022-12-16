@@ -6,7 +6,6 @@ import { motion } from "framer-motion"
 
 const EmailPopup = ({ open, setOpen }) => {
 
-  // const { keyDownHandler, email, state, subscribe, setEmail, setStateIdle, errorMessage } = useContext(EmailContext)
   const [email, setEmail] = useState("");
   const [state, setState] = useState("IDLE");
   const [errorMessage, setErrorMessage] = useState(null);
