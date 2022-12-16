@@ -14,7 +14,7 @@ export default function Landing() {
 
   return (
     <div className="font-grotesk h-full w-full absolute left-0 top-0 overflow-hidden flex flex-col items-center justify-center">
-        <div className='h-[200px] w-[400px]'>
+        <div className='h-[170px] sm:h-[200px] w-[400px]'>
           <Canvas camera={cameraSettings}>
             <Logo />
           </Canvas>
