@@ -179,8 +179,6 @@ export async function updateCheckout(id, lineItems) {
     }`
   })
 
-  console.log(id)
-
   const query = `
     mutation {
       checkoutLineItemsReplace(lineItems: [${lineItemsObject}], checkoutId: "${id}") {
@@ -203,11 +201,9 @@ export async function updateCheckout(id, lineItems) {
   
   const response = await ShopifyData(query)
 
-  console.log(response)
 
   const checkout = response.data.checkoutLineItemsReplace.checkout ? response.data.checkoutLineItemsReplace.checkout : []
 
-  console.log(checkout)
 
   return checkout
 }

@@ -1,5 +1,6 @@
 /* eslint-disable import/no-anonymous-default-export */
 import axios from "axios";
+import { emailValidator } from "../../utils/validator";
 
 function getRequestParams(email) {
   const API_KEY = process.env.MAILCHIMP_API_KEY;
@@ -33,6 +34,8 @@ function getRequestParams(email) {
 export default async (req, res) => {
   const { email } = req.body;
 
+  const validate = emailValidator(email)
+
   if (!email || !email.length) {
     return res.status(400).json({
       error: "Forgot to add your email?",
@@ -40,18 +43,27 @@ export default async (req, res) => {
   }
 
   try {
-    const { url, data, headers } = getRequestParams(email);
-    
-    const response = await fetch(url, {
-      method: "POST",
-      headers: headers,
-      body: JSON.stringify({
-        email_address: data.email_address,
-        status: data.status,
-      }),
+
+    if (validate) {
+
+      const { url, data, headers } = getRequestParams(email);
+      
+      const response = await fetch(url, {
+        method: "POST",
+        headers: headers,
+        body: JSON.stringify({
+          email_address: data.email_address,
+          status: data.status,
+        }),
+      });
+
+      return res.status(201).json({ error: null })
+    }
+
+    return res.status(400).json({
+      error: `Email invalid...`
     });
 
-    return res.status(201).json({ error: null })
   } catch (error) {
     return res.status(400).json({
       error: `Oops, something went wrong...`

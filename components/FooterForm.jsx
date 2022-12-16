@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from "axios";
 import ThankYouMarquee from "./ThankYou"
+import { emailValidator } from '../utils/validator';
 
 export default function FooterForm({ setClicked }) {
   const [email, setEmail] = useState("");
@@ -10,12 +11,22 @@ export default function FooterForm({ setClicked }) {
   const subscribe = async () => {
     setState("LOADING");
     setErrorMessage(null);
+
+    const validator = emailValidator(email)
+
     try {
-      const response = await axios.post("/api/newsletter", { email });
-      setState("SUCCESS");
+      if (validator) {
+        const response = await axios.post("/api/newsletter", { email });
+        setState("SUCCESS");
+        setEmail('')
+      } else {
+        setState("ERROR")
+        setEmail('')
+      }
     } catch (error) {
       setErrorMessage(error.response.data.error)
       setState("ERROR")
+      setEmail('')
     }
   }
 
@@ -33,14 +44,21 @@ export default function FooterForm({ setClicked }) {
       <>
         <div className="w-screen flex items-center justify-center">
           <form onSubmit={subscribe}>
-            <input className="text-white text-center w-[300px] h-[30px] bg-transparent border-b-[1px]" onKeyPress={keyDownHandler} type="text" placeholder="Enter Email..." value={email} onChange={(e) => setEmail(e.target.value)}/>
+            <input className={`text-white text-center w-[300px] h-[30px] bg-transparent border-b-[1px] ${state === 'ERROR' ? 'border-red-200' : ''}`} onKeyPress={keyDownHandler} type="text" placeholder="Enter Email..." value={email} onChange={(e) => setEmail(e.target.value)}/>
           </form>
         </div> 
         <div onClick={() => {setClicked(false)}} className="cursor-pointer text-[24px] pr-3">[<i>×</i>]</div>
       </>
       )} 
       {state === "ERROR" && (
-        <p>{errorMessage}</p>
+      <>
+        <div className="w-screen flex items-center justify-center">
+          <form onSubmit={subscribe}>
+            <input className="text-white text-center w-[300px] h-[30px] bg-transparent border-b-[1px] border-red-200" onKeyPress={keyDownHandler} type="text" placeholder="Email Invalid, Please Reenter..." value={email} onChange={(e) => setEmail(e.target.value)}/>
+          </form>
+        </div> 
+        <div onClick={() => {setClicked(false)}} className="cursor-pointer text-[24px] pr-3">[<i>×</i>]</div>
+      </>
       )}    
       {state === "SUCCESS" && (
         <ThankYouMarquee />

@@ -52,7 +52,9 @@ export default function ShopProvider({ children }) {
       const newCheckout = await updateCheckout(checkoutId, updatedCart)
       localStorage.setItem("checkout_id", JSON.stringify([updatedCart, newCheckout]))
     } catch (error) {
-      console.log(error)
+      return res.status(400).json({
+        error: `Something went wrong at checkout...`
+      });
     }
     
 
