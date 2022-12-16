@@ -11,7 +11,8 @@ const EmailPopup = ({ open, setOpen }) => {
   const [state, setState] = useState("IDLE");
   const [errorMessage, setErrorMessage] = useState(null);
 
-  const subscribe = async () => {
+  const subscribe = async (e) => {
+    e.preventDefault();
     setState("LOADING");
     setErrorMessage(null);
 
@@ -81,11 +82,11 @@ const EmailPopup = ({ open, setOpen }) => {
                   <div className="absolute top-[13px] right-[0px] cursor-pointer text-[18px] mr-8 color-white" onClick={() => {setOpen(false)}}>[<i>×</i>]</div>
                 </div>
                 <form onSubmit={subscribe} className="absolute top-[70px] left-[13px] text-white text-center w-full flex items-center justify-between">
-                <input className="w-full h-[30px] 
-                                  text-white text-[16px] 
-                                  bg-transparent border-b-[1px]" 
-                                  onKeyPress={keyDownHandler} type="text" placeholder="Enter Email..." value={email} onChange={(e) => setEmail(e.target.value)}
-                />
+                  <input className="w-full h-[30px] 
+                                    text-white text-[16px] 
+                                    bg-transparent border-b-[1px]" 
+                                    onKeyPress={keyDownHandler} type="text" placeholder="Enter Email..." value={email} onChange={(e) => setEmail(e.target.value)}
+                  />
                   <button className="bg-white w-[90px] h-[30px] text-black border-[2px] font-bold rounded ml-6 mr-[30px]" type="submit" disabled={state === "LOADING"}>{state === "LOADING" ? 'Loading...' : 'Submit'}</button>
                 </form>
               </>
@@ -110,17 +111,15 @@ const EmailPopup = ({ open, setOpen }) => {
                                     bg-transparent border-b-[1px] border-red-200" 
                                     onKeyPress={keyDownHandler} type="text" placeholder="Email Invalid, Try Again..." value={email} onChange={(e) => setEmail(e.target.value)}
                   />
-                  <button className="bg-white w-[90px] h-[30px] text-black border-[2px] font-bold rounded ml-6 mr-[30px]" type="submit" disabled={state === "LOADING"}>{state === "LOADING" ? 'Loading...' : 'Submit'}</button>
+                  <button className="bg-white w-[90px] h-[30px] text-black border-[2px] font-bold rounded ml-6" type="submit" disabled={state === "LOADING"}>{state === "LOADING" ? 'Loading...' : 'Submit'}</button>
                 </form>
               </>
             )}
             {state === "SUCCESS" && (
-              <>
-                <div>
-                  <h1 className='absolute w-[300px] sm:w-[480px] h-[24px] text-white text-[12px] md:text-[14px] top-[13px] left-[13px]'>Thank you for signing up! </h1>
-                  <div className="absolute top-[13px] right-[0px] cursor-pointer text-[18px] mr-8 color-white" onClick={() => {setOpen(false)}}>[<i>×</i>]</div>
-                </div>
-              </>
+              <div className='flex items-center justify-center w-full h-full'>
+                <h1 className='text-white text-[18px] md:text-[26px]'>Thank you for signing up! </h1>
+                <div className="absolute top-[13px] right-[0px] cursor-pointer text-[18px] mr-8 color-white" onClick={() => {setOpen(false)}}>[<i>×</i>]</div>
+              </div>
             )}
           </div>
         </motion.div>
