@@ -14,6 +14,9 @@ export default function Landing() {
     position: [ 0, -0.5, 4.5 ]
   }
 
+  console.log("WE ALREADY WON !")
+  console.log("WAW.WW")
+
   return (
     <div className="font-montreal h-full w-full absolute left-0 top-0 overflow-hidden flex flex-col items-center justify-center">
         <div className='h-[170px] sm:h-[200px] w-[400px]'>

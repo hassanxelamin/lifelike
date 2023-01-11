@@ -29,9 +29,12 @@ export default function Home({ products }) {
 
   },[])
 
+  console.log("WE ALREADY WON !")
+  console.log("WAW.WW")
+
   return (
     <Layout open={open} setOpen={setOpenState}>
-      <EmailPopup open={open} setOpen={setOpenState}/>
+      {/* <EmailPopup open={open} setOpen={setOpenState}/> */}
       <div onClick={() => {setOpen(false)}} className="flex items-center justify-center overflow-hidden">
         <ProductList products={products} /> 
       </div>

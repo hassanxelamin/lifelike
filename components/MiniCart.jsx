@@ -17,7 +17,7 @@ const MiniCart = ({ cartQuanity }) => {
   })
 
   return (
-    <Transition.Root show={cartOpen} as={Fragment} className="z-50 font-grotesk">
+    <Transition.Root show={cartOpen} as={Fragment} className="z-50 font-montreallight">
       <Dialog initialFocus={cancelButtonRef} as="div" className="relative z-50" onClose={() => {setCartOpen(!cartOpen) }}>
         <Transition.Child
           as={Fragment}

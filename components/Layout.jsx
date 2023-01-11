@@ -17,11 +17,11 @@ const Layout = (props) => {
         <title>LifeLike®</title>
       </Head>
 
-      <div className='overflow-hidden fixed left-0 top-0 w-full'>
+      <div className='overflow-hidden fixed left-0 top-0 w-full z-50 '>
         <Nav open={props.open} setOpen={setOpenFalse} />
       </div>
 
-      <div className='flex justify-center items-center items-center h-screen'>{props.children}</div>
+      <div className='flex justify-center items-center items-center h-screen -z-50'>{props.children}</div>
 
       {/* <div className='overflow-hidden fixed left-0 bottom-0 w-full'>
         <Footer setOpen={setOpenFalse} />
