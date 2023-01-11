@@ -17,7 +17,7 @@ const MiniCart = ({ cartQuanity }) => {
   })
 
   return (
-    <Transition.Root show={cartOpen} as={Fragment} className="z-50 font-montreallight">
+    <Transition.Root show={cartOpen} as={Fragment} className="z-50 font-montreal">
       <Dialog initialFocus={cancelButtonRef} as="div" className="relative z-50" onClose={() => {setCartOpen(!cartOpen) }}>
         <Transition.Child
           as={Fragment}
@@ -47,7 +47,7 @@ const MiniCart = ({ cartQuanity }) => {
                   <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
                     <div className="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
                       <div className="flex items-start justify-between text-[36px]">
-                        <Dialog.Title className="font-medium text-gray-900">Cart ({cartQuanity})</Dialog.Title>
+                        <Dialog.Title className="text-[25px] font-medium text-gray-900">Cart ({cartQuanity})</Dialog.Title>
                         <div className="flex items-center">
                           <button
                             ref={cancelButtonRef}
@@ -56,7 +56,7 @@ const MiniCart = ({ cartQuanity }) => {
                             onClick={() => setCartOpen(false)}
                           >
                             {/* <span className="sr-only">Close Panel</span> */}
-                            <div className='font-medium text-gray-900'>Close</div>
+                            <div className='text-[25px] font-medium text-gray-900'>Close</div>
                             {/* <XMarkIcon className="h-6 w-6" aria-hidden="true" /> */}
                           </button>
                         </div>
@@ -112,7 +112,7 @@ const MiniCart = ({ cartQuanity }) => {
                               ))}
                             </ul>
                             : 
-                            <div className="mt-12 flex justify-between text-[36px] font-medium text-gray-900">
+                            <div className="text-[25px] font-medium text-gray-900 mt-12 flex justify-between">
                               <p>Nothing in your cart</p>
                             </div>
                           }
