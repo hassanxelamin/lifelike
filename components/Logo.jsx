@@ -20,6 +20,7 @@ function Logo() {
       <directionalLight position={ [ -1, -2, -3 ] }/>
 
       <ambientLight intensity={ 0.5 }/>
+      {/* <axesHelper args={[5]} /> */}
 
       {/* <Suspense> */}
       <LifeLike />

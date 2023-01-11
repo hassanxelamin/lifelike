@@ -5,10 +5,10 @@ import { Canvas } from '@react-three/fiber'
 import dynamic from 'next/dynamic'
 
 const MiniCart = dynamic(() => import('./MiniCart'))
-const Logo = dynamic(() => import('./Logo'))
+const LogoHome = dynamic(() => import('./LogoHome'))
 
 const cameraSettings = {
-  fov: 45,
+  fov: 16,
   near: 0.1,
   far: 200,
   position: [ 0, -0.5, 4.5 ]
@@ -24,11 +24,11 @@ export default function Nav({ open, setOpen }) {
   })
   
   return (
-    <nav className="h-[106px] w-screen text-[14px] font-medium flex items-center justify-between px-[20px] sm:px-[46px]">
+    <nav className="w-screen text-[14px] font-medium flex flex-col sm:flex-row items-center justify-between pr-[20px] sm:pr-[46px]">
       <Link href='/'>
-        <div className='z-50 h-[100px] w-[160px]'>
+        <div className='z-50 h-[120px] w-[270px] sm:w-[290px]'>
           <Canvas camera={cameraSettings}>
-            <Logo />
+            <LogoHome />
           </Canvas>
         </div>
       </Link>
