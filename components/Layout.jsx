@@ -12,7 +12,7 @@ const Layout = (props) => {
   }
 
   return (
-    <div className='font-grotesk'>
+    <div className='font-montreal'>
       <Head>
         <title>LifeLike®</title>
       </Head>
@@ -23,9 +23,9 @@ const Layout = (props) => {
 
       <div className='flex justify-center items-center items-center h-screen'>{props.children}</div>
 
-      <div className='overflow-hidden fixed left-0 bottom-0 w-full'>
+      {/* <div className='overflow-hidden fixed left-0 bottom-0 w-full'>
         <Footer setOpen={setOpenFalse} />
-      </div>
+      </div> */}
     </div>
   )
 }

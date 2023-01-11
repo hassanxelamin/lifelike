@@ -25,6 +25,8 @@ module.exports = {
     extend: {
       fontFamily: {
         grotesk: '"neue-haas-grotesk-display", "helvetica", "sans"',
+        montreal: '"Montreal", "helvetica", "sans"',
+        montreallight: '"Montreal-Light", "helvetica", "sans"',
       },
       animation: {
         marquee: 'marquee 20s linear infinite',

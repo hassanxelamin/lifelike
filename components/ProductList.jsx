@@ -23,14 +23,16 @@ const ProductList = ({ products }) => {
 
         return (
           <Link key={uuid()} href={`/product/${handle}`} passHref legacyBehavior>
-            <a className='group'>
-              <div className='w-[350px] h-[400px] sm:w-[456px] sm:h-[456px] bg-gray-200 overflow-hidden flex items-center justify-center hover:rounded-3xl hover:transition-all'>
-                <div className='relative hover:transition-all group-hover:opacity-90 w-[300px] h-[400px] sm:w-[400px] sm:h-[456px]'>
-                  <Image src={url} alt={altText} width={465} height={465} />
+            <a className="flex flex-col items-center justify-center">
+              <div className='w-[435px] h-[300px] sm:w-[500px] sm:h-[456px] bg-gray-200 overflow-hidden flex items-center justify-center hover:rounded-3xl hover:transition-all'>
+                <div className='relative hover:transition-all group-hover:opacity-90 object-cover'>
+                  <Image src={url} alt={altText} width={575} height={600} />
                 </div>
               </div>
-              <h3 className='mt-4 text-[20px] font-medium text-gray-900'>{title}</h3>
-              <p className="mt-1 text-[14px] text-gray-700">{formatter.format(price)}</p>
+              <div className="flex items-center justify-center mt-[15px]">
+                <h3 className='mt-4 text-[14px] font-bold text-gray-900'>{title}</h3>
+                {/* <p className="mt-1 text-[14px] text-gray-700">{formatter.format(price)}</p> */}
+              </div>
             </a>
           </Link>
         )

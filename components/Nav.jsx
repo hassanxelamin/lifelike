@@ -24,7 +24,7 @@ export default function Nav({ open, setOpen }) {
   })
   
   return (
-    <nav className="h-[106px] w-screen text-[26px] flex items-center justify-between px-[46px]">
+    <nav className="h-[106px] w-screen text-[14px] font-medium flex items-center justify-between px-[46px]">
       <Link href='/'>
         <div className='h-[100px] w-[180px]'>
           <Canvas camera={cameraSettings}>
@@ -32,11 +32,16 @@ export default function Nav({ open, setOpen }) {
           </Canvas>
         </div>
       </Link>
-      <div className="flex items-center">
-        {/* <div onClick={() => {setOpen()}} className='cursor-pointer'>Brand</div> */}
+      <div className="flex items-center font-montreallight font-bold">
+        <Link href="/">
+          <div className="mr-[15px] hover:underline">HOME</div>
+        </Link>
+        <Link href="/products">
+          <div className="mr-[15px] hover:underline">SHOP</div>
+        </Link>
         {open 
-          ? <div onClick={() => {setOpen(), setCartOpen(!cartOpen)}} className="ml-[23px] cursor-pointer">Cart ({cartQuantity})</div>
-          : <div onClick={() => {setCartOpen(!cartOpen)}} className="ml-[20px] sm:ml-[23px] cursor-pointer">Cart ({cartQuantity})</div>
+          ? <div onClick={() => {setOpen(), setCartOpen(!cartOpen)}} className="cursor-pointer hover:underline">CART {cartQuantity}</div>
+          : <div onClick={() => {setCartOpen(!cartOpen)}} className="flex items-center justify-center cursor-pointer  hover:underline">CART <div className="flex items-center justify-center text-center ml-[3px] bg-black w-[15px] h-[15px] text-white rounded-full"><div className="text-[10px]">{cartQuantity}</div></div></div>
         }
         <MiniCart cartQuanity={cartQuantity} />
       </div>

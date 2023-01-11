@@ -32,7 +32,7 @@ export default function Home({ products }) {
   return (
     <Layout open={open} setOpen={setOpenState}>
       <EmailPopup open={open} setOpen={setOpenState}/>
-      <div onClick={() => {setOpen(false)}}>
+      <div onClick={() => {setOpen(false)}} className="flex items-center justify-center overflow-hidden">
         <ProductList products={products} /> 
       </div>
     </Layout>

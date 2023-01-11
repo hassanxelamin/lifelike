@@ -15,14 +15,14 @@ export default function Landing() {
   }
 
   return (
-    <div className="font-grotesk h-full w-full absolute left-0 top-0 overflow-hidden flex flex-col items-center justify-center">
+    <div className="font-montreal h-full w-full absolute left-0 top-0 overflow-hidden flex flex-col items-center justify-center">
         <div className='h-[170px] sm:h-[200px] w-[400px]'>
           <Canvas camera={cameraSettings}>
             <Logo />
           </Canvas>
         </div>
-        <Link href='/home'>
-          <button className='text-[15px] text-bold w-[150px] h-[50px] border-black border-1 border-solid'>Enter</button>
+        <Link href='/products'>
+          <button className="font-montreallight text-[17px] font-bold py-[9px] px-[50px] border-[2px] border-black border-solid">Enter</button>
         </Link>
     </div>
   )

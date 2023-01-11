@@ -105,9 +105,9 @@ const EmailPopup = ({ open, setOpen }) => {
                 <form onSubmit={subscribe} className="absolute top-[70px] left-[13px] 
                                                       text-white text-center w-full pr-[30px] 
                                                       flex items-center justify-between">
-                  <input className="w-full h-[30px] 
-                                    text-white text-[16px] 
-                                    bg-transparent border-b-[1px] border-red-200" 
+                  <input className="w-full h-[30px]
+                                    text-white text-[16px]
+                                    bg-transparent border-b-[1px] border-red-200"
                                     onKeyPress={keyDownHandler} type="text" placeholder="Email Invalid, Try Again..." value={email} onChange={(e) => setEmail(e.target.value)}
                   />
                   <button className="bg-white w-[90px] h-[30px] text-black border-[2px] font-bold rounded ml-6" type="submit" disabled={state === "LOADING"}>{state === "LOADING" ? 'Loading...' : 'Submit'}</button>

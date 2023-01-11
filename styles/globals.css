@@ -8,6 +8,32 @@
   }
 } */
 
+@layer base {
+  @font-face {
+    font-family: 'Montreal';
+    src: url('/PPNeueMontreal-Bold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Montreal';
+    src: url('/PPNeueMontreal-Book.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'Montreal-Light';
+    src: url('/PPNeueMontreal-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+}
+
 /* BASE STYLES  */  
 @layer base {
   *,

@@ -7,7 +7,7 @@ const ProductOptions = ({ name, values, selectedOptions, setOptions }) => {
   };
 
   return (
-    <select id="sizes" className='text-[16px] w-[108px] h-[24px] border-[1px] border-black rounded-[3px] outline-none' onChange={handleChange}>
+    <select id="sizes" className='text-[16px] py-[9px] px-[15px] border-[1px] border-black outline-none' onChange={handleChange}>
       {/* <option className='text-[14px]'>Select Size</option> */}
       {values.map(value => {
         const id = `option-${name}-${value}`
