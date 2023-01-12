@@ -24,7 +24,7 @@ export default function Nav({ open, setOpen }) {
   })
   
   return (
-    <nav className="w-screen text-[14px] font-medium flex flex-col sm:flex-row items-center justify-between pr-[20px] sm:pr-[46px]">
+    <nav className="w-screen text-[14px] font-medium flex flex-col sm:flex-row items-center justify-between pr-[20px] sm:pr-[46px] overflow-hidden">
       <Link href='/'>
         <div className='z-50 h-[120px] w-[270px] sm:w-[290px]'>
           <Canvas camera={cameraSettings}>

@@ -7,9 +7,9 @@ const ProductPageContent = dynamic(() => import('../../components/ProductPageCon
 export default function ProductPage({ product }) {
 
   return (
-    <div className='flex items-center justify-center -z-50'>
+    <>
       <ProductPageContent product={product} />
-    </div>
+    </>
   )
 }
 

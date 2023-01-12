@@ -24,7 +24,7 @@ const ProductList = ({ products }) => {
         return (
           <Link key={uuid()} href={`/product/${handle}`} passHref legacyBehavior>
             <a className="flex flex-col items-center justify-center">
-              <div className='w-[400px] h-[300px] sm:w-[500px] sm:h-[456px] bg-gray-200 overflow-hidden flex items-center justify-center hover:rounded-3xl hover:transition-all'>
+              <div className='w-[350px] h-[300px] sm:w-[500px] sm:h-[456px] bg-gray-200 overflow-hidden flex items-center justify-center hover:rounded-3xl hover:transition-all'>
                 <div className='relative hover:transition-all group-hover:opacity-90 object-cover'>
                   <Image src={url} alt={altText} width={575} height={600} />
                 </div>

@@ -40,9 +40,9 @@ const ProductPageContent = ({ product }) => {
 
   return (
     <Layout>
-      <div className='flex flex-col mt-[325px] lg:mt-0 w-[350px] md:w-[auto] lg:flex-row md:flex-col items-center justify-center'>
+      <div className='flex flex-col mt-[325px] mx-[800px] lg:mt-0 w-[350px] md:w-[auto] lg:flex-row md:flex-col items-center justify-center z-50'>
 
-        <div className='relative flex items-center justify-center sm:w-[600px] w-[400px] sm:w-[600px]'>
+        <div className='relative flex items-center justify-center sm:w-[600px] w-[500px] sm:w-[600px] overflow-hidden'>
 
           {disable ? (
             <div onClick={goToPrevious} className="visible cursor-pointer">
@@ -79,7 +79,7 @@ const ProductPageContent = ({ product }) => {
           )}
         </div> 
 
-        <div>
+        <div className="sm:pl-[60px]">
           <ProductDetails product={product} />
         </div>
 
