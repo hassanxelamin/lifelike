@@ -17,7 +17,7 @@ export default function LifeLikeHome({ scale }) {
 
    return (
     // <Float roatationIntensity={8} speed={4}>
-      <primitive ref={myMesh} object={model.scene} scale={0.034} position={ [ 0, 0, 0 ] }/>
+      <primitive ref={myMesh} object={model.scene} scale={0.035} position={ [ 0, 0, 0 ] }/>
     // </Float>
    );
 }
