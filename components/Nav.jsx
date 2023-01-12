@@ -43,7 +43,7 @@ export default function Nav({ open, setOpen }) {
           ? <div onClick={() => {setOpen(), setCartOpen(!cartOpen)}} className="cursor-pointer hover:underline">CART {cartQuantity}</div>
           : <div onClick={() => {setCartOpen(!cartOpen)}} className="flex items-center justify-center cursor-pointer  hover:underline">CART <div className="flex items-center justify-center text-center ml-[3px] bg-black w-[15px] h-[15px] text-white rounded-full"><div className="text-[10px]">{cartQuantity}</div></div></div>
         }
-        <MiniCart cartQuanity={cartQuantity} />
+        <MiniCart cartQuanity={cartQuantity} className="z-50" />
       </div>
     </nav>
   )

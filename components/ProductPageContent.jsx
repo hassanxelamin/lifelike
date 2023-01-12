@@ -40,7 +40,7 @@ const ProductPageContent = ({ product }) => {
 
   return (
     <Layout>
-      <div className='flex flex-col mt-[325px] mx-[800px] lg:mt-0 w-[350px] md:w-[auto] lg:flex-row md:flex-col items-center justify-center z-50'>
+      <div className='flex flex-col mt-[325px] mx-[800px] lg:mt-0 w-[350px] md:w-[auto] lg:flex-row md:flex-col items-center justify-center'>
 
         <div className='relative flex items-center justify-center sm:w-[600px] w-[380px] sm:w-[600px] overflow-hidden'>
 
