@@ -24,7 +24,7 @@ export default function Marquee() {
         <div className="absolute top-0 py-12 animate-marquee3 whitespace-nowrap">
           <span className="ml-[175px]">Sign up for updates</span>
           <span className="ml-[175px]">LifeLike®</span>
-          <span className="ml-[175px]">Sign up for updates</span>
+          <span className="ml-[175px]">Sign up for upda</span>
           <span className="ml-[175px]">LifeLike®</span>
           <span className="ml-[175px]">Sign up for updates</span>
           <span className="ml-[175px]">LifeLike®</span>
