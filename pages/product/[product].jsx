@@ -9,6 +9,7 @@ export default function ProductPage({ product }) {
   return (
     <>
       <ProductPageContent product={product} />
+      <div className='mt-[40px]'></div>
     </>
   )
 }
