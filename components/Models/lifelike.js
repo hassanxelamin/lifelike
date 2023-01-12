@@ -17,7 +17,7 @@ export default function LifeLike({ scale }) {
 
    return (
     // <Float roatationIntensity={8} speed={4}>
-      <primitive ref={myMesh} object={model.scene} scale={0.135} position={ [ 0, 0, 0 ] }/>
+      <primitive ref={myMesh} object={model.scene} scale={0.115} position={ [ 0, 0, 0 ] }/>
     // </Float>
    );
 }
