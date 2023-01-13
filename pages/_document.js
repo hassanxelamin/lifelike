@@ -6,6 +6,7 @@ export default function Document() {
       <Head>
         <meta name="description" content="WE ALREADY WON 🏆🌐" />
         <link rel="stylesheet" href="https://use.typekit.net/jvx8pkg.css"/>
+        <link rel="shortcut icon" href="/LL.jpg"/>
       </Head>
       <body>
         <Main />

@@ -1,12 +1,11 @@
 /* eslint-disable import/no-anonymous-default-export */
-import axios from "axios";
 import { emailValidator } from "../../utils/validator";
 
 function getRequestParams(email) {
   const API_KEY = process.env.MAILCHIMP_API_KEY;
   const LIST_ID = process.env.MAILCHIMP_LIST_ID;
   const DATACENTER = process.env.MAILCHIMP_API_KEY.split("-")[1];
-
+  
   const url = `https://${DATACENTER}.api.mailchimp.com/3.0/lists/${LIST_ID}/members`;
 
   const data = {
@@ -21,13 +20,11 @@ function getRequestParams(email) {
     Authorization: `Basic ${base64ApiKey}`
   };
 
-
   return{
     url,
     data,
     headers,
   }
-
 }
 
 
