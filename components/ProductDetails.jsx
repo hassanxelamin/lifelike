@@ -150,7 +150,7 @@ const ProductDetails = ({ product }) => {
         <div>A BOXY FITTING SHIRT THAT UTILIZES MORE THAN JUST USUAL 50% OF ITS MATERIAL. GRAPHICS ON BOTH SIDES ALLOWS 100% OF ITS USAGE. AND 100% IS ABSOLUTE WITH A CAPITAL A.</div>
         <div>6.5 OZ 100% COTTON.</div>
         <div>ORDER TRUE TO SIZE. SHIRTS FIT A SIZE LARGER ON THE BODY, AS INTENDED.</div>
-        <div>ALL SALES FINAL.</div>
+        <div>ALL SALES FINAL</div>
       </div>
     </div>
   )
