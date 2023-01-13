@@ -17,8 +17,6 @@ const ProductList = ({ products }) => {
 
         const { handle, title } = product.node;
 
-        console.log(product)
-
         const { altText, url } = product.node.images.edges[1].node
         
         const price = product.node.priceRange.minVariantPrice.amount
@@ -28,7 +26,7 @@ const ProductList = ({ products }) => {
             <a className="flex flex-col items-center justify-center">
               <div className='w-[350px] h-[300px] sm:w-[500px] sm:h-[456px] bg-gray-200 overflow-hidden flex items-center justify-center hover:rounded-3xl hover:transition-all'>
                 <div className='relative hover:transition-all group-hover:opacity-90 object-cover'>
-                  <Image src={url} alt={altText} width={575} height={600} />
+                  <Image src={url} alt="ABSOLUTE TEE" width={575} height={600} />
                 </div>
               </div>
               <div className="flex items-center justify-center mt-[15px]">
